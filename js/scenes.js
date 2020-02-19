@@ -10,9 +10,17 @@ class BaseScene extends Phaser.Scene {
         this.physics.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
         this.map.landscape = this.map.addTilesetImage('spritesheet_ground', 'landscape-image');
         this.map.props = this.map.addTilesetImage('spritesheet_tiles', 'props-image');
+        this.setCamera();
+        this.map.background = this.add.image(this.camera.centerX, this.camera.centerY, 'background-image');
+        this.map.background.setScale(this.camera.height / this.map.background.height);
         this.createLayers();
     }
 
+    setCamera() {
+        this.camera = this.cameras.getCamera('');
+        this.camera.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
+    }
+    
     createLayers() {
         this.map.createStaticLayer('background', [this.map.landscape, this.map.props], 0, 0);
         this.map.createStaticLayer('platforms', [this.map.landscape, this.map.props], 0, 0);
@@ -29,6 +37,7 @@ class Scene1 extends BaseScene {
     preload() {
         this.load.image('landscape-image', 'assets/spritesheet_ground.png');
         this.load.image('props-image', 'assets/spritesheet_tiles.png');
+        this.load.image('background-image', 'assets/blue_grass.png');
         this.load.tilemapTiledJSON('level1', 'assets/level1.json');
     }
 
@@ -48,6 +57,7 @@ class Scene2 extends BaseScene {
     preload() {
         this.load.image('landscape-image', 'assets/spritesheet_ground.png');
         this.load.image('props-image', 'assets/spritesheet_tiles.png');
+        this.load.image('background-image', 'assets/blue_grass.png');
         this.load.tilemapTiledJSON('level1', 'assets/level2.json');
     }
 

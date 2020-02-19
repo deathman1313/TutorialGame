@@ -1,9 +1,10 @@
-{ "compressionlevel":-1,
+{ "compressionlevel":0,
  "editorsettings":
     {
      "export":
         {
-         "format":"json"
+         "format":"json",
+         "target":"."
         }
     },
  "height":15,
@@ -47,44 +48,8 @@
                  "type":"playerSpawn",
                  "visible":true,
                  "width":0,
-                 "x":193.939393939394,
-                 "y":1654.54545454545
-                }, 
-                {
-                 "height":0,
-                 "id":4,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":1087.12121212121,
-                 "y":1275.75757575758
-                }, 
-                {
-                 "height":0,
-                 "id":5,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":319.090909090909,
-                 "y":887.878787878788
-                }, 
-                {
-                 "height":0,
-                 "id":6,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":1091.78787878788,
-                 "y":503.969696969697
+                 "x":193.939,
+                 "y":1654.55
                 }],
          "opacity":1,
          "type":"objectgroup",

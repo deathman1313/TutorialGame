@@ -1,4 +1,4 @@
-{ "compressionlevel":-1,
+{ "compressionlevel":0,
  "height":15,
  "infinite":false,
  "layers":[
@@ -40,56 +40,8 @@
                  "type":"playerSpawn",
                  "visible":true,
                  "width":0,
-                 "x":193.939393939394,
-                 "y":1654.54545454545
-                }, 
-                {
-                 "height":0,
-                 "id":3,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":690.909090909091,
-                 "y":1139.39393939394
-                }, 
-                {
-                 "height":0,
-                 "id":4,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":1084.84848484848,
-                 "y":1142.42424242424
-                }, 
-                {
-                 "height":0,
-                 "id":5,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":696.969696969697,
-                 "y":372.727272727273
-                }, 
-                {
-                 "height":0,
-                 "id":6,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"gemSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":1212.12121212121,
-                 "y":372.727272727273
+                 "x":193.939,
+                 "y":1654.55
                 }],
          "opacity":1,
          "type":"objectgroup",
