@@ -1,2 +1,2 @@
 # TutorialGame
-My Phaser3 platformer tutorial game example, made for BSc1b Game Tutorial Task
+My Phaser3 platformer tutorial game example, made for my University Project: BSc1b Game Tutorial Task
