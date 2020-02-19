@@ -3,6 +3,7 @@ class BaseScene extends Phaser.Scene {
     player;
     cursors;
     camera;
+    nextScene;
     exit;
 
     constructor(key) {
@@ -32,6 +33,19 @@ class BaseScene extends Phaser.Scene {
     }
 
     update() {
+        this.processMovement();
+        let tile = this.exit.getTileAtWorldXY(this.player.x, this.player.y);
+        if (tile) {
+            switch(tile.index) {
+                case 212:
+                case 220:
+                    this.scene.start(this.nextScene);
+                break;
+            }
+        }
+    }
+
+    processMovement() {
         if (this.cursors.left.isDown) {
             this.player.setVelocityX(-500);
             this.player.anims.play('move', true);
@@ -92,6 +106,7 @@ class Scene1 extends BaseScene {
     }
 
     create() {
+        this.nextScene = 'scene2';
         this.map = this.make.tilemap({
             key: 'level1'
         });
@@ -108,7 +123,7 @@ class Scene2 extends BaseScene {
         this.load.image('landscape-image', 'assets/spritesheet_ground.png');
         this.load.image('props-image', 'assets/spritesheet_tiles.png');
         this.load.image('background-image', 'assets/blue_grass.png');
-        this.load.tilemapTiledJSON('level1', 'assets/level2.json');
+        this.load.tilemapTiledJSON('level2', 'assets/level2.json');
         this.load.spritesheet('player', 'assets/alienYellow.png', {
             frameWidth: 128,
             frameHeight: 143
@@ -116,6 +131,7 @@ class Scene2 extends BaseScene {
     }
 
     create() {
+        this.nextScene = 'scene2';
         this.map = this.make.tilemap({
             key: 'level2'
         });
